@@ -26,7 +26,7 @@ def test_create_and_get_item(client: TestClient):
     # Get
     resp = client.get(f"/items/{item_id}")
     assert resp.status_code == 200
-    assert resp.json()["name"] == "book"
+    assert resp.json()["name"] == "book_fail_ci"
 
 def test_update_item(client: TestClient):
     # Create
